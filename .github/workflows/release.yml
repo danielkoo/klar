@@ -19,6 +19,7 @@ jobs:
     - name: compile and release
       uses: ngs/go-release.action@v1.0.1
       env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         GOARCH: "386"
         GOOS: linux
         EXTRA_FILES: "klar LICENSE"
@@ -36,6 +37,7 @@ jobs:
     - name: compile and release
       uses: ngs/go-release.action@v1.0.1
       env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         GOARCH: amd64
         GOOS: linux
         EXTRA_FILES: "klar LICENSE"
@@ -53,6 +55,7 @@ jobs:
     - name: compile and release
       uses: ngs/go-release.action@v1.0.1
       env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         GOARCH: amd64
         GOOS: darwin
         EXTRA_FILES: "klar LICENSE"
